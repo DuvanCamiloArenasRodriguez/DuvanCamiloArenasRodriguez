@@ -1,0 +1,100 @@
+
+//Función suma
+Funcion total<-suma(NumerosCalculos)
+	resultado = 0
+	Para i <- NumerosCalculos[1] Hasta NumerosCalculos[Cantidadnum] Con Paso 1 Hacer
+		resultado = resultado + NumerosCalculos[i]
+	FinPara
+	Escribir "Resultado: ", resultado 
+FinFuncion
+
+Funcion total<-resta(NumerosCalculos)
+	diferencia = 0
+	Para i <- NumerosCalculos[1] Hasta NumerosCalculos[Cantidadnum] Con Paso 1 Hacer
+		resultado = resultado - NumerosCalculos[i]
+	FinPara
+	Escribir "Resultado: ", diferencia 
+	
+FinFuncion
+
+//Funcion total<-multiplicacion(a[10],b[10])
+//	
+//FinFuncion
+//
+//Funcion total<-division(a[10],b[10])
+//	
+//FinFuncion
+
+Algoritmo Calculadora
+	
+	Escribir "Ingrese la cantidad de números con la que desea trabajar"
+	Leer Cantidadnum
+	
+	si Cantidadnum < 10 Entonces
+		Dimension NumerosCalculos[Cantidadnum]
+		para i <- 1 Hasta NumerosCalculos[Cantidadnum] Con Paso 1 Hacer
+			NumerosAlmacenados = NumerosCalculos[i]
+			
+		FinPara
+		 
+		Para i <- 1 Hasta Cantidadnum Con Paso 1 Hacer
+			Escribir "ingrese un número nuevo "
+			leer NumerosCalculos[i]
+			Limpiar Pantalla;
+			
+			Escribir "Seleccione la operación que desea realizar: "
+			Escribir "1. Suma"
+			Escribir "2. resta"
+			Escribir "3. Multiplicación"
+			Escribir "4. División"
+			Leer seleccion
+			
+			Segun seleccion Hacer
+				1:
+					//Se invoca la función suma
+				2:
+					//Se invoca la función resta
+				3:
+					Escribir "Elija una opción:"
+					Escribir "1. Multiplicar todos los números"
+					Escribir "2. Multiplicar los números pares"
+					leer OpcionMultiplicacion
+					
+					Segun OpcionMultiplicacion Hacer
+						1:
+							//Se invoca la funcion multiplicacion
+						2:
+							Dimension Pares[0]
+							Para i <- 1 Hasta Cantidadnum Con Paso 1 Hacer
+								si NumerosCalculos[i] mod 2 == 0 Entonces
+									pares[i] <- NumerosCalculos[i]
+								FinSi
+							FinPara
+							
+							//Invocar función multiplicacion()
+							
+							
+						De Otro Modo:
+							Escribir "Debe seleccionar una opción válida"
+					FinSegun
+					
+					
+					
+					
+				4:
+					Escribir "Elija una opción:"
+					Leer OpcionDivision
+			FinSegun
+			
+		FinPara
+	SiNo
+		Escribir "Debe ingresar menos números"
+	FinSi
+	
+	
+	
+	
+	
+	
+FinAlgoritmo
+
